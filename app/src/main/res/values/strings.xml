@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">To Do List</string>
+    <string name="label_hint_title">Título</string>
+    <string name="label_add_task">Adicionar Tarefa</string>
+    <string name="label_update">Atualizar</string>
+    <string name="label_delete_all">Deletar tudo</string>
+    <string name="label_search">Procurar</string>
+    <string name="label_sort">Ordenar por prioridade</string>
+    <string name="label_hint_description">Descrição</string>
+    <string name="label_date">Data</string>
+    <string name="label_time">Hora</string>
+    <string name="label_to_do_list">Lista de Tarefas</string>
+    <string name="label_update_task">Atualizar Tarefa</string>
+    <string name="label_toast_no_title">Adicione um título!</string>
+    <string name="label_toast_updated">Atualizado!</string>
+    <string name="label_toast_created">Tarefa Criada!</string>
+    <string name="label_task_deleted">Tarefa Apagada!</string>
+    <string name="label_undo">Desfazer</string>
+    <string name="label_empty_tasks">Ainda não há \nnenhuma tarefa aqui</string>
+    <string-array name="priorities">
+        <item>Alta Prioridade</item>
+        <item>Média Prioridade</item>
+        <item>Baixa Prioridade</item>
+    </string-array>
+</resources>

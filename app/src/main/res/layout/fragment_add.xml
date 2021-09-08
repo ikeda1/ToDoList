@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.add.AddFragment"
+        android:background="@drawable/gradient">
+
+        <!-- Margens laterais e central para a caixa de input -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+        <!--  ===================================== -->
+
+        <EditText
+            android:id="@+id/edt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:hint="@string/label_hint_title"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray_ish"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_description"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:hint="@string/label_hint_description"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray_ish"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:gravity="start|top"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/edt_title" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="?attr/dropdownListPreferredItemHeight"
+            android:layout_marginTop="16dp"
+            android:entries="@array/priorities"
+            android:minHeight="48dp"
+            android:background="@drawable/spinner_bg"
+            android:dropDownWidth="300dp"
+            android:paddingHorizontal="10dp"
+            android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+            android:popupBackground="@android:color/white"
+            android:popupElevation="3dp"
+            android:stateListAnimator="@drawable/spinner_sla"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/edt_description" />
+
+        <EditText
+            android:id="@+id/edt_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_date"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="10dp"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:inputType="none"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_input"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintEnd_toStartOf="@id/guide_date"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            app:layout_constraintBottom_toTopOf="@id/btn_add"/>
+
+        <EditText
+            android:id="@+id/edt_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_time"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="10dp"
+            android:padding="16dp"
+            android:focusable="false"
+            android:inputType="none"
+            android:background="@drawable/custom_input"
+            app:layout_constraintStart_toEndOf="@id/guide_date"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            app:layout_constraintTop_toTopOf="@id/edt_date"
+            app:layout_constraintBottom_toBottomOf="@id/edt_date" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_add_task"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/edt_date" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
